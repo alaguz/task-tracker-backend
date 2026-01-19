@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sqlite3
 from datetime import datetime
+import os  # RENDER FIX
 
 app = Flask(__name__)
 CORS(app)
@@ -40,7 +41,6 @@ def update_task(id):
     conn.close()
     return jsonify({'success': True})
 
-
 @app.route('/tasks/<int:id>', methods=['DELETE'])
 def delete_task(id):
     conn = get_db()
@@ -60,4 +60,5 @@ with get_db() as conn:
     conn.commit()
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))  # RENDER FIX
+    app.run(host='0.0.0.0', port=port, debug=False)  # RENDER FIX
