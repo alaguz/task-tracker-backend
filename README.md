@@ -44,9 +44,25 @@ DELETE /tasks/:id # Delete task
 Built for portfolio: end-to-end full-stack (React + Flask + SQLite).
 
 
-Update Repo
+## Update Repo
+Power Shell , run
 cd C:\Users\alanj\task-tracker\backend
-notepad README.md  # Paste updated → Save
+notepad README.md
 git add README.md
 git commit -m "Polish README with badges/code blocks"
 git push origin main
+
+## Links:
+https://gregarious-shortbread-678dc1.netlify.app/
+
+https://task-tracker-api-y2qn.onrender.com/tasks
+
+http://127.0.0.1:5000/tasks
+
+
+
+## Extra:
+powershell run
+cd C:\Users\alanj\task-tracker\backend
+dir  # Confirms app.py, tasks.db, requirements.txt
+
